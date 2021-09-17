@@ -1,0 +1,25 @@
+@import '@/variables.scss';
+
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $white;
+    background: #1f1e1f;
+    display: grid;
+    grid-template-columns: 8.5em auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+main {
+    margin-left: 2.2em;
+    // overflow: scroll;
+}
