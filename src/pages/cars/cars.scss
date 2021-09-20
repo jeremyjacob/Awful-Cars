@@ -1,0 +1,54 @@
+@import '@/variables.scss';
+
+main.cars {
+    background-color: $white;
+    height: 100vh;
+    padding: 0 2em;
+
+    h1 {
+        padding-top: 1em;
+        color: $bg;
+        // font-family: 'Playfair Display', serif;
+
+        span {
+            // color: $yellow;
+        }
+    }
+
+    #cards {
+        display: grid;
+        grid-auto-flow: column;
+        grid-row-gap: 0px;
+        gap: 1em;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 0.45em;
+
+        .card {
+            color: $bg;
+
+            h4,
+            h3,
+            h2 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            h4,
+            h2 {
+                font-family: 'Playfair Display', serif;
+            }
+
+            h3 {
+                float: right;
+                // color: $yellow;
+                margin-right: 1em;
+                margin-top: 0.27em;
+            }
+
+            img {
+                height: 91%;
+            }
+        }
+    }
+}

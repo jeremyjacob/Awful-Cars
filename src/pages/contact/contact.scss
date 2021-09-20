@@ -1,0 +1,147 @@
+@import '@/variables.scss';
+
+main.contact {
+    // background-color: $gray1;
+    height: 100vh;
+    padding: 0 2em;
+    color: $white;
+
+    div#contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-gap: 0;
+        grid-auto-flow: row;
+        height: calc(100vh - 2.5em);
+        width: calc(90% - 2.5em);
+
+        h1 {
+            padding-top: 0.9em;
+        }
+
+        div.social {
+            background: lighten($bg, 10%);
+            border-radius: 12px;
+            width: 100%;
+            height: 8vh;
+            min-width: 17em;
+            $padding: 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & > div {
+                margin: 0 1.5em;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                div {
+                    font-family: 'Lato', sans-serif;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    span {
+                        margin-left: 0.6em;
+                        margin-top: 0.1em;
+                    }
+                }
+
+                $border-color: rgb(95, 95, 95);
+                div:nth-child(1) {
+                    border-right: 1px solid $border-color;
+                    padding-right: 49%;
+                    justify-self: left;
+                    margin-left: 2.5em;
+                }
+                div:nth-child(2) {
+                    justify-self: center;
+                }
+                div:nth-child(3) {
+                    border-left: 1px solid $border-color;
+                    padding-left: 49%;
+                    justify-self: right;
+                    margin-right: 2.7em;
+                }
+
+                img {
+                    width: 1.4em;
+                }
+            }
+        }
+
+        div.form {
+            border-radius: 14px;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 2em;
+
+            div.input {
+                padding-bottom: 2em;
+
+                label {
+                    display: block;
+                    font-size: 1.05em;
+                    font-family: 'Lato', sans-serif;
+                    margin-bottom: 0.3em;
+                    color: darken($white, 20%);
+                }
+                input,
+                textarea {
+                    padding: 0.58em 0.65em;
+                    font-size: 1.1em;
+                    outline: none;
+                    background-color: lighten($bg, 10%);
+                    border: none;
+                    border-radius: 15px;
+                    color: white;
+                    font-family: 'Lato', sans-serif;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                }
+
+                textarea {
+                    padding: 0.9em 0.95em;
+                    width: 50%;
+                    height: 10em;
+                    resize: none;
+                }
+            }
+
+            button {
+                background: $yellow;
+                border: none;
+                font-size: 1.1em;
+                height: 2.1em;
+                width: 4.7em;
+                border-radius: 11px;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+                    rgba(243, 185, 59, 0) 0px 0px,
+                    rgba(243, 185, 59, 0) -1px 1px,
+                    rgba(243, 185, 59, 0) -2px 2px,
+                    rgba(243, 185, 59, 0) -3px -3px,
+                    rgba(243, 185, 59, 0) -4px 4px;
+                transition: all 0.34s $easeOutQuint;
+
+                &:hover {
+                    background: lighten($yellow, 2%);
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+                        rgba(243, 185, 59, 0.4) -5px 5px,
+                        rgba(243, 185, 59, 0.3) -10px 10px,
+                        rgba(243, 185, 59, 0.2) -15px 15px,
+                        rgba(243, 185, 59, 0.1) -20px 20px,
+                        rgba(243, 185, 59, 0.05) -25px 25px;
+                    border: 2px solid $yellow;
+                }
+            }
+        }
+    }
+}

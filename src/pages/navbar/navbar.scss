@@ -1,15 +1,17 @@
 @import '@/variables.scss';
 
 nav {
-    height: 100vh;
+    height: 90vh;
     color: #f5f4f6;
     margin-top: 2.5em;
     margin-left: 3.1em;
+    // position: sticky;
+    overflow: hidden;
 
     div {
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        height: 75%;
+        height: 88%;
         cursor: default;
         text-align: center;
 
@@ -18,11 +20,11 @@ nav {
             list-style-type: none;
             display: inline;
             cursor: pointer;
-            color: $gray1;
+            color: darken($gray1, 7%);
             transition: all 0.1s;
 
             &:not(.selected):hover {
-                color: lighten($gray1, 9%);
+                color: lighten($gray1, 12%);
             }
 
             &.selected {

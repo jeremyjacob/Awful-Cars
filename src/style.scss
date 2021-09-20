@@ -1,25 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght;300;400&family=Playfair+Display:wght@500;600;700&display=swap');
 @import '@/variables.scss';
 
 html,
 body {
-    overflow: hidden;
     margin: 0;
+    padding: 0;
+    background-color: $bg;
+}
+
+::selection {
+    background: opacify($yellow, 0.1);
 }
 
 #app {
+    height: 100vh;
+    width: 100vw;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $white;
-    background: #1f1e1f;
+    background: $bg;
     display: grid;
-    grid-template-columns: 8.5em auto;
+    grid-template-columns: 5.7em auto;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
-main {
-    margin-left: 2.2em;
-    // overflow: scroll;
+#scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    margin-left: 3.5em;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & > main {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 }
