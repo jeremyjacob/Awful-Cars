@@ -4,6 +4,9 @@ import path from 'path'
 const resolve = (rel: string) => path.resolve(__dirname, rel)
 
 export default defineConfig({
+    build: {
+        outDir: './docs',
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
