@@ -1,1 +1,0 @@
-nav{height:90vh;color:#f5f4f6;margin-top:2.5em;margin-left:3.1em;overflow:hidden}nav div{writing-mode:tb-rl;transform:rotate(-180deg);height:88%;cursor:default;text-align:center}nav div a{margin-top:1.8em;list-style-type:none;display:inline;cursor:pointer;color:#a4a4a4;transition:all .1s}nav div a:not(.selected):hover{color:#d5d5d5}nav div a.selected{color:#f5f4f6;cursor:default}

@@ -5,7 +5,7 @@ const resolve = (rel: string) => path.resolve(__dirname, rel)
 
 export default defineConfig({
     build: {
-        outDir: './docs',
+        outDir: './oublic',
     },
     resolve: {
         alias: {
